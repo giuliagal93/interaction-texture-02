@@ -6,7 +6,7 @@ function setup() {
 
 function touchStarted() {
     
-    for(i=0; i < 20 ; i++) {
+    for(i=0; i < 200 ; i++) {
          x = x + 1;
     };
     
