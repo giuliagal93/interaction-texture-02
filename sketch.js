@@ -20,16 +20,11 @@ function touchStarted() {
     x = x + 10;*/
 }
 
-/*
+
 function touchEnded() {
-if (value == 0) {
-    value = 255;
-  } else {
-    value = 0;
-  }    
-        x = x + 10;
+         x = 20;
 }
-*/
+
 
 function draw() {
     background(50);
