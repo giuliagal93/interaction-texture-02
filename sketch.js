@@ -1,39 +1,31 @@
 var value = 0;
 var x = 20;
 function setup() {
-  createCanvas(windowWidth, windowHeight)
-}
-
-function touchStarted() {
-    
-    for(i=0; i < 200 ; i++) {
-         x = x + 1;
-    };
-    
-    /*
-    if (value == 0) {
-    value = 255;
-  } else {
-    value = 0;
-  };
-    
-    x = x + 10;*/
-}
-
-
-function touchEnded() {
-         x = 20;
-}
+  createCanvas(windowWidth, windowHeight);
+} 
 
 
 function draw() {
+    
     background(50);
     
+    if(touchIsDown) {
+        
+        for(i=0; i < 20 ; i++) {
+         var y = x + 1;
+         x = y;
+        };
+        
+    } else {
+            x = 20;
+        };
+
+        
+            
     noStroke;
     fill(220);
-    rect(0,0,windowWidth,x);
+               rect(0,0,windowWidth,x);
 
-  
   /*// Define one color for each touch point
   var colorList = ['#e86584',
                  '#3c5979',
