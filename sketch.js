@@ -5,15 +5,22 @@ function setup() {
 }
 
 function touchStarted() {
+    
+    for(i=0; i < 20 ; i++) {
+         x = x + 1;
+    };
+    
+    /*
     if (value == 0) {
     value = 255;
   } else {
     value = 0;
   };
     
-    x = x + 10;
+    x = x + 10;*/
 }
 
+/*
 function touchEnded() {
 if (value == 0) {
     value = 255;
@@ -22,14 +29,14 @@ if (value == 0) {
   }    
         x = x + 10;
 }
+*/
 
 function draw() {
     background(50);
     
     noStroke;
-    fill(value);
+    fill(220);
     rect(0,0,windowWidth,x);
-      return false;
 
   
   /*// Define one color for each touch point
