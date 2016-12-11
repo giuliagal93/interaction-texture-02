@@ -1,13 +1,56 @@
-var value = 0;
 var x = 20;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight);
+    noStroke();
+    frameRate(10);
+        background(200,100,255,100);
+
 } 
 
+var posx = 0;
 
 function draw() {
     
-    background(50,50);
+    if(touchIsDown){
+    
+    var colorList = ['#333333',
+                 '#eeeeee',
+                 '#333333',
+                 '#eeeeee',
+                 '#333333'
+                 ];
+    
+                   }
+    else {
+        var colorList = ['#eeeeee',
+                 '#333333',
+                 '#eeeeee',
+                 '#333333',
+                 '#eeeeee'
+                 ];
+        
+    }
+        
+    for(index=0; index < colorList.length; index++){
+    
+    /*y = x - 50;
+    x = y;*/
+        
+    fill(colorList[index]);
+
+      
+    ellipse(posx, height/2, 300-60*index);
+
+    }
+    
+
+    /*
+    
+    fill(colorList[0]);
+    ellipse(width/2, height/2, 400,400)
+    
+    
+    
     
     if(touchIsDown) {
         
@@ -16,8 +59,11 @@ function draw() {
          x = y;
         };
         
-    } else {
-            x = 20;
+    } else if(touchIsReleased){
+          for(i=0; i < 1 ; i++) {
+         var y = x - 1;
+         x = y;
+        };
         };
 
         
@@ -25,25 +71,13 @@ function draw() {
     noStroke;
     fill(220);
                rect(0,0,windowWidth,x);
-
-  /*// Define one color for each touch point
-  var colorList = ['#e86584',
-                 '#3c5979',
-                 '#018cb7',
-                 '#fae093',
-                 '#ffe2e6',
-                 '#6eb66d',
-                 '#ffa960',
-                 '#2b61ce',
-                 '#c496d7',
-                 '#6faaec',
-                 '#fea24d'
-                 ];
+*/
   
-  for(var i=0; i < touches.length; i++) {
-    
-var touch = touches[i];
-    fill(colorList[i]);
-    ellipse(touch.x, touch.y, 150, 150);
-  }*/
+}
+
+function deviceShaken() {
+  posx = posx + 5;
+  if (posx > width) {
+    posx = 0;
+  }
 }
