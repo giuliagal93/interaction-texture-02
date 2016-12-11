@@ -5,6 +5,7 @@ var posy = 100;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
+   background(100,200,100,70);
 
 
 
@@ -28,18 +29,20 @@ function deviceTurned() {
 }
 
 function deviceShaken() {
-  touchY = touchY + 1;
-  if (touchY > height-100) {
-    touchY = 100;
-  }
+     background(100,200,100,70);
+  
+    
+//  touchY = touchY + 1;
+//  if (touchY > height-100) {
+//    touchY = 100;
+//  }
 }
 
 function draw() {
     
-   background(100,200,100,70);
         
     fill(valueR, valueG,valueB);
-    ellipse(touchX, touchY, 100, 100);
+    ellipse(touchX, touchY, 30, 30);
 
     
    /* if(touchIsDown){
