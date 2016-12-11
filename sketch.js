@@ -23,9 +23,9 @@ function deviceTurned() {
 }
 
 function deviceShaken() {
-  posy = posy + 1;
-  if (posy > height-100) {
-    posy = 100;
+  touchY = touchY + 1;
+  if (touchY > height-100) {
+    touchY = 100;
   }
 }
 
@@ -34,7 +34,7 @@ function draw() {
    background(100,100,255,70);
         
     fill(value);
-    ellipse(width/2, posy, 200, 200);
+    ellipse(touchX, touchY, 200, 200);
 
     
    /* if(touchIsDown){
