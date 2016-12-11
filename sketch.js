@@ -7,11 +7,11 @@ function setup() {
 
 function draw() {
     
-    background(50);
+    background(50,50);
     
     if(touchIsDown) {
         
-        for(i=0; i < 20 ; i++) {
+        for(i=0; i < 1 ; i++) {
          var y = x + 1;
          x = y;
         };
