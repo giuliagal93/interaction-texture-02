@@ -6,11 +6,11 @@ function setup() {
 
 } 
 
-var posy = 0;
+var posy = 100;
 
 function draw() {
     
-    background(200,100,255,100);
+    background(200,100,255,70);
     
     if(touchIsDown){
     
@@ -21,9 +21,8 @@ function draw() {
                  '#eeeeee'
                  ];    
         
-    
-                   }
-    else {
+    } else {
+        
         colorList = ['#333333',
                  '#eeeeee',
                  '#333333',
@@ -40,7 +39,6 @@ function draw() {
         
     fill(colorList[index]);
 
-      
     ellipse(width/2, posy, 200-40*index);
 
     }
@@ -79,7 +77,7 @@ function draw() {
 
 function deviceShaken() {
   posy = posy + 1;
-  if (posy > width) {
-    posy = 0;
+  if (posy > height-100) {
+    posy = 100;
   }
 }
