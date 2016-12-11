@@ -3,30 +3,32 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
     frameRate(10);
-        background(200,100,255,100);
 
 } 
 
-var posx = 0;
+var posy = 0;
 
 function draw() {
     
+    background(200,100,255,100);
+    
     if(touchIsDown){
     
-    var colorList = ['#333333',
-                 '#eeeeee',
-                 '#333333',
-                 '#eeeeee',
-                 '#333333'
-                 ];
-    
-                   }
-    else {
-        var colorList = ['#eeeeee',
+    var colorList = ['#eeeeee',
                  '#333333',
                  '#eeeeee',
                  '#333333',
                  '#eeeeee'
+                 ];    
+        
+    
+                   }
+    else {
+        colorList = ['#333333',
+                 '#eeeeee',
+                 '#333333',
+                 '#eeeeee',
+                 '#333333'
                  ];
         
     }
@@ -39,7 +41,7 @@ function draw() {
     fill(colorList[index]);
 
       
-    ellipse(posx, height/2, 300-60*index);
+    ellipse(width/2, posy, 200-40*index);
 
     }
     
@@ -76,8 +78,8 @@ function draw() {
 }
 
 function deviceShaken() {
-  posx = posx + 5;
-  if (posx > width) {
-    posx = 0;
+  posy = posy + 1;
+  if (posy > width) {
+    posy = 0;
   }
 }
