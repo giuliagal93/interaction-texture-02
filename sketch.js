@@ -5,20 +5,25 @@ var posy = 100;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
-    frameRate(10);
 
 
 
 
 } 
 
-var value = 0
+var valueR = 240;
+var valueG = 60;
+var valueB = 90;
 
 function deviceTurned() {
-  if (value == 0){
-    value = 255
-  } else if (value == 255) {
-    value = 0;
+  if (valueR == 240 && valueG == 60 && valueB == 90){
+    valueR = 240;
+    valueG = 200;
+    valueB = 60;
+  } else if (valueR == 240 && valueG == 200 && valueB == 60) {
+    valueR = 240;
+    valueG = 60;
+    valueB = 90;
   }
 }
 
@@ -31,10 +36,10 @@ function deviceShaken() {
 
 function draw() {
     
-   background(100,100,255,70);
+   background(100,200,100,70);
         
-    fill(value);
-    ellipse(touchX, touchY, 200, 200);
+    fill(valueR, valueG,valueB);
+    ellipse(touchX, touchY, 100, 100);
 
     
    /* if(touchIsDown){
